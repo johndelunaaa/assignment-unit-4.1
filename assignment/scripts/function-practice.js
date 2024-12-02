@@ -15,47 +15,72 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
 
+console.log(helloName('Johnny'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
-  // return firstNumber + secondNumber;
+function addNumbers(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
 }
+
+console.log(addNumbers(58, 92));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
+  return firstNumber * secondNumber * thirdNumber;
 }
+
+console.log(multiplyThree(19, 6, 3));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
+    return true;
+  } else {}
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 
+console.log(isPositive(12));
+console.log(isPositive(-12));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+  if (array.length === 0) {
+    return undefined;
+  } else {
+  return array[array.length - 1];
+  }
 }
+
+console.log(getLast([12, 14, 45, 85, 98]));
+console.log(([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] === value) {
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(find(0, []));
+console.log(find(23, [22, 23, 24, 25]));
+console.log(find('skateboard', ['bike', 'snowboard', 'wakeboard']));
+console.log();
+
 
 // ----------------------
 // Stretch Goals
